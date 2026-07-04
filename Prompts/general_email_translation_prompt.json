@@ -1,0 +1,43 @@
+{
+  "task": "translate_email",
+  "target_language": "[LANGUAGE] suitable for readers in [REGION]",
+  "brand_tone": "refer reference_example & article_url to get the tone of voice",
+  "product": "SimCapture AI",
+  "reference_examples": {
+    "email_1": "
+[SUBJECT]
+[PREVIEW TEXT]
+[EMAIL BODY]
+[CTA]
+	",
+    "email_2": "
+[SUBJECT]
+[PREVIEW TEXT]
+[EMAIL BODY]
+[CTA]	",
+    "article_url": ["[LINK 1]", "[LINK 2]"]
+  },
+  "content_to_translate_1": {
+    "subject_line": "",
+    "preview_copy": "​",
+    "title": "",
+    "body_1": "",
+    "cta_1": "",
+	"body_1": ""
+  },
+  "content_to_translate_2": {
+    "subject_line": "",
+    "preview_copy": "​",
+    "title": "​",
+    "body_1": "",
+    "cta_1": "",
+	"body_2": ""
+  },
+  "content_to_translate_3": {
+    "subject_line": "",
+    "preview_copy": "",
+    "title": "",
+    "body": "",
+    "cta": ""
+  }
+}

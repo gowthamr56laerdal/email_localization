@@ -1,0 +1,23 @@
+I need a translation of the email from English to {languge} from {region}
+ 
+Here is the example of our other emails in {language} so you get the tone of voice. The product is {product name}.
+ 
+Email 1 example:
+
+ 
+Email 2 example
+
+ 
+Here is the article example:
+
+ 
+Here is the email you to translate:
+1. Subject line:
+
+2. Preview copy:
+
+3. Title:
+
+4. Body:
+
+5. CTA copy:
