@@ -29,48 +29,28 @@ npm -v
 
 ---
 
-### 2. Install Git
 
-Download and install Git for Windows:
-
-<p>
-  <a href="https://git-scm.com/install/windows">
-    <img src="https://img.shields.io/badge/Download-Git_for_Windows-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Download Git for Windows">
-  </a>
-</p>
-
-Verify the installation in CMD:
-
-```
-git --version
-```
-
-> **Why installing Git is required:** If the prompts or functionality of this email localization system change in the future, you can easily sync your local copy with the latest updates from the GitHub repository. This avoids the need to manually update the project whenever changes are made.
-
----
-
-## 3. Add Node.js and Git to the PATH Environment Variable (if required)
+## 2. Add Node.js to the PATH Environment Variable (if required)
 
 > You can skip this step if the previous commands work without any errors.
 
-If `node` or `git` is not recognized in Command Prompt, PowerShell, or VS Code, add their installation folders to your **PATH** environment variable.
+If `node` is not recognized in Command Prompt, PowerShell, or VS Code, add their installation folders to your **PATH** environment variable.
 
 | Application | Find Installation Path | Example Output | Add This Folder to PATH |
 |-------------|------------------------|----------------|-------------------------|
 | <p align="center"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"></p> | Run `where node` in Command Prompt | `C:\Program Files\nodejs\node.exe` | `C:\Program Files\nodejs\` |
-| <p align="center"><img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"></p> | Run `where git` in Command Prompt | `C:\Program Files\Git\cmd\git.exe` | `C:\Program Files\Git\cmd\` |
 
 ---
 
 ### How to add a folder to PATH
 
-1. Press **Win** and search for **Environment Variables**.
+1. Press **Windows** and search for **Environment Variables**.
 2. Open **Edit the system environment variables**.
 3. Click **Environment Variables...**
 4. Under **System variables**, select **Path**.
 5. Click **Edit**.
 6. Click **New**.
-7. Paste the Node.js and Git folder path if already not.
+7. Paste the Node.js folder path if already not.
 8. Click **OK** to save all dialogs.
 9. Close and reopen your terminal or VS Code.
 
@@ -79,22 +59,11 @@ Verify the installation again:
 ```
 node -v
 npm -v
-git --version
 ```
 
 ---
 
-### 4. Clone the Repository
-
-Open a terminal and run where you want the `Email Localization` project to be:
-
-```
-git clone https://github.com/gowthamr56laerdal/email_localization.git
-```
-
----
-
-### 5. Configure PowerShell Execution Policy (Only if Required)
+### 3. Configure PowerShell Execution Policy (Only if Required)
 
 > This step is required only if you encounter PowerShell execution policy errors.
 
@@ -112,11 +81,11 @@ Y
 
 ---
 
-## Opening the Project
+## Opening The Project
 
-Open Visual Studio Code and choose the `Email Localization` folder to work on.
-
-Then open **Claude Code** inside the project folder.
+1. Extract the **Zip** file that you're provided with.
+2. Open Visual Studio Code and choose the `Email Localization` folder to work on.
+3. Then open **Claude Code** inside the project folder.
 
 ---
 
@@ -127,7 +96,6 @@ Run the following commands to ensure everything is installed correctly:
 ```
 node -v
 npm -v
-git --version
 ```
 
 If all commands return version numbers, your environment is ready.
