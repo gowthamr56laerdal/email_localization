@@ -68,11 +68,11 @@ Translations MUST:
 2. NOT be literal machine translation  
 3. Maintain a professional healthcare / education tone  
 4. Preserve readability in an email marketing context  
-5. **Using the `Examples/Email Examples - AI Translation.xlsx` as a tone reference is mandatory for every translation**
-    - Before translating into a given language, check that language's tab in the example file to calibrate tone and phrasing.
+5. **Using `reference-library/<lang-code>/<lang-code>-emails.md` as a tone reference is mandatory for every translation**
+    - Before translating into a given language, read that language's file in `reference-library/` (folder name = lowercase language code, e.g. `de` for German) to calibrate tone and phrasing.
     - Do not rely on literal machine translation without this step.
 
-**Example:** Before translating into German, refer to the example copies in the German tab of the `Email Examples - AI Translation.xlsx` file to understand the tone of voice. Follow the same for other languages as well
+**Example:** Before translating into German, refer to the example copies in `reference-library/de/de-emails.md` to understand the tone of voice. Follow the same for other languages as well
 
 ---
 

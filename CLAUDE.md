@@ -17,8 +17,10 @@ email_localization/
 │   ├── Stripo_email_localization_prompt.txt   # Primary prompt for Excel-based Stripo translation
 │   ├── general_email_translation_prompt.txt   # Template for ad-hoc single-language translation
 │   └── general_email_translation_prompt.json  # Structured JSON version of the above
-└── Examples/           # Reference translations for tone calibration
-    └── Email Examples - AI Translation.xlsx   # Tone reference for @stripo-email-localizer (agent) only. Strictly follow.
+├── Examples/            # Source Excel file used to build reference-library/ (kept for provenance/updates)
+│   └── Email Examples - AI Translation.xlsx
+└── reference-library/   # Tone reference for @stripo-email-localizer (agent) only. Strictly follow.
+    └── <lang-code>/<lang-code>-emails.md   # One folder per language — see reference-library/CLAUDE.md
 ```
 
 ## Role Context

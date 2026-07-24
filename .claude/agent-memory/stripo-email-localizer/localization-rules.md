@@ -41,8 +41,8 @@ Stripo uses custom numbered tags like `<p_1>`, `<strong_8>`, `<br_3/>`, `<ul_21>
 
 # Tone Reference Check
 
-Before finalizing translations for any language, confirm the matching language tab in `Examples/Email Examples - AI Translation.xlsx` was reviewed for tone calibration.
-- If a language has no matching tab in the example file, note this explicitly rather than skipping the check silently.
+Before finalizing translations for any language, confirm the matching `reference-library/<lang-code>/<lang-code>-emails.md` file was reviewed for tone calibration.
+- If a language has no matching file in `reference-library/`, note this explicitly rather than skipping the check silently.
 - Do not treat this as optional guidance — it is a required verification step before output is considered complete.
 
 **Why:** 
