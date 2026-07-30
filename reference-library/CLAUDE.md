@@ -26,7 +26,8 @@ reference-library/
 ├── pl/pl-emails.md   # Polish
 ├── pt/pt-emails.md   # Portuguese (Brazil)
 ├── sv/sv-emails.md   # Swedish
-└── zh/zh-emails.md   # Chinese (Simplified)
+├── zh/zh-emails.md   # Chinese (Simplified)
+└── language-mapping.md   # locale & domain mapping table.
 ```
 
 Each `*-emails.md` file is a single Markdown table with one column per example email (currently 4) and one row per email field: `Subject`, `Preview Text`, `Title`, `Body`, `CTA`. Line breaks within a field are encoded as `<br>`/`<br><br>`, matching the HTML-export convention used in the Excel campaign files under `../Campaigns/`.

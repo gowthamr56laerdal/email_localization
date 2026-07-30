@@ -20,7 +20,8 @@ email_localization/
 ├── Examples/            # Source Excel file used to build reference-library/ (kept for provenance/updates)
 │   └── Email Examples - AI Translation.xlsx
 └── reference-library/   # Tone reference for @stripo-email-localizer (agent) only. Strictly follow.
-    └── <lang-code>/<lang-code>-emails.md   # One folder per language — see reference-library/CLAUDE.md
+    ├── <lang-code>/<lang-code>-emails.md   # One folder per language — see reference-library/CLAUDE.md
+    └── language-mapping.md   # locale & domain mapping table.
 ```
 
 ## Role Context
