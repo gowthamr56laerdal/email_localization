@@ -2,9 +2,9 @@
 
 Exact process to follow when validating laerdal.com links from a user-provided Excel file:
 
-1. Load `mcp__excel__read_data_from_excel` and `mcp__excel__get_workbook_metadata` via ToolSearch before calling them.
-2. Call `get_workbook_metadata` first to discover the sheet name (do NOT assume "Sheet1" — the sheet is typically named "Translations").
-3. Call `read_data_from_excel` on the correct sheet to get all cell values.
+1. Load `mcp__excel__excel_describe_sheets` and `mcp__excel__excel_read_sheet` via ToolSearch before calling them.
+2. Call `excel_describe_sheets` first to discover the sheet name (do NOT assume "Sheet1" — the sheet is typically named "Translations").
+3. Call `excel_read_sheet` on the correct sheet to get all cell values.
 4. Extract all cell values containing `laerdal.com` (ignore CDN/image URLs from stripocdn.email — only check laerdal.com links). Skip any links matching `URL-exceptions.md`.
 5. Load `WebFetch` via ToolSearch.
 6. Check all laerdal.com links in parallel, but cap each parallel batch at ~10 WebFetch calls (not all 24+ locales at once) to avoid misattributing a result to the wrong URL when collating many simultaneous results.

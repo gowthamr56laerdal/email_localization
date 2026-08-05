@@ -8,7 +8,7 @@ color: yellow
 permissionMode: acceptEdits
 mcpServers: 
     - excel
-tools: Read, Write, Edit, Bash, WebFetch, WebSearch
+tools: Read, Write, Edit, WebFetch, WebSearch, mcp__excel__excel_describe_sheets, mcp__excel__excel_read_sheet
 ---
 
 # Instructions
