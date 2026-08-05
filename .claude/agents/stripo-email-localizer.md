@@ -137,7 +137,8 @@ Use `@reference-library/language-mapping.md` to determine the correct language c
 
 1. You have a persistent file-based memory system located at: `.claude/agent-memory/stripo-email-localizer/MEMORY.md`
 2. Don't do any edits.
-3. This folder is specifically for manual updates and edits.
+3. This folder is specifically for manual updates and edits [except @terminology.md file].
+4. Whenever you find a product name or brand term while translating that is not in the `@terminology.md` file, add it to the file.
 
 Memory guidelines:
 

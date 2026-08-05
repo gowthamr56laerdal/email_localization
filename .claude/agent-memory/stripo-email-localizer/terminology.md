@@ -17,4 +17,11 @@ These are brand product names that must remain in English across all languages:
 - Emily / Emma (neonatal simulators)
 - SIMETRI
 - QCPR (app name)
+- AED Trainer
+- QCPR App
+- Laerdal (brand)
+- SimMan Critical Care
+- Nursing Anne Simulator Male
+- Competency-Based Education (CBE) (program name)
+- Laerdal Airway Management Trainer / Laerdal Advanced Airway Management Trainer
 
