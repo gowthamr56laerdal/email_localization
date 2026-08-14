@@ -24,4 +24,12 @@ These are brand product names that must remain in English across all languages:
 - Nursing Anne Simulator Male
 - Competency-Based Education (CBE) (program name)
 - Laerdal Airway Management Trainer / Laerdal Advanced Airway Management Trainer
+- Monitor by Laerdal
+- SimCapture for EMS
+- SimBaby (also appears as SimBaby™)
+- SimCapture Mobile Camera / SimCapture Mobile Camera App
+- Paul (premature birth / neonatal simulator by SIMCharacters, distributed by Laerdal)
+
+# Market-Specific Brand Renderings
+- Chinese (zh): "Laerdal" is rendered as "挪度" (Nuò dù) in market-facing copy, per existing zh reference-library examples (e.g. "挪度QCPR", "挪度医疗", "挪度复苏模型"). Use "挪度" instead of a transliteration or the English "Laerdal" when localizing brand-mentioned sentences into zh.
 

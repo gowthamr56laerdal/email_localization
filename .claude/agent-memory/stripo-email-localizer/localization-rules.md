@@ -50,3 +50,11 @@ Before finalizing translations for any language, confirm the matching `reference
 - Also ensures translations sound natural and match Laerdal's established marketing voice per language, rather than reading as generic machine translation.
 
 **How to apply:** Treat as a pre-completion checklist item for every language column being translated, alongside the HTML and URL checks already in this file.
+
+# Raw vs Escaped `<br>` — Real Newline vs Literal Tag Text
+
+When reading a cell via `excel_read_sheet`, the tool's HTML table rendering escapes literal text tags (e.g. Stripo's `<p_5>`, `<strong_1>`, `<br_3/>` show up as `&lt;p_5&gt;` etc., because they are real characters in the cell). But an actual Excel cell line-break (soft return / Alt+Enter) is rendered by the tool as a raw, **unescaped** `<br>` for display purposes — it is NOT literal text in the cell.
+
+- If a cell shows a raw/unescaped `<br>` while everything else around it is escaped, that is very likely a real newline character, not literal tag text.
+- Do NOT copy that rendered `<br>` into translations as literal text (i.e. do not type the characters `<br>`). Doing so introduces a tag that doesn't literally exist in the source and will show up escaped (`&lt;br&gt;`) on read-back — mismatching the source's raw/unescaped rendering. This is a real bug caught by review (2026, CPR Training Program Newsletters file): translated cells had literal `<br>` text while the English source had a true newline at that position.
+- **How to apply:** When translating any cell where the English source shows a raw/unescaped `<br>`, write an actual newline character (`\n`) in that position in the translated cell instead of the literal string `<br>`, preserving any trailing/leading whitespace exactly as in the source. Verify by reading the cell back — a correctly matching translation will also show a raw/unescaped `<br>` in the tool's table output, not `&lt;br&gt;`.
