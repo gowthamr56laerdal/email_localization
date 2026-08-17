@@ -32,8 +32,8 @@ version of that page and confirm its content language matches the expected local
 5. If any row is a mismatch, error, or redirect, call it out explicitly in a short
    summary line above or below the table.
 6. If the user asks for a CSV of the results (e.g. "create a .csv in .temp"), write
-   the same table as CSV using the Write tool directly into the `.temp/` folder
-   (e.g. `.temp/{from the input URL}}.csv`), with a header row matching the
+   the same table as CSV using the Write tool directly into the `.temp/localized-webpage-check/` folder
+   (e.g. `.temp/localized-webpage-check/{from the input URL}}.csv`), with a header row matching the
    table columns above.
 
 ## Notes
