@@ -74,6 +74,8 @@ Translations MUST:
 
 **Example:** Before translating into German, refer to the example copies in `reference-library/de/de-emails.md` to understand the tone of voice. Follow the same for other languages as well
 
+**Note:** `gl` (Belgian French) has no dedicated tone reference file in `reference-library/`. Use `reference-library/fr/fr-emails.md` (standard French) as the tone reference for `gl` instead.
+
 ---
 
 # Stripo Safety Requirements
