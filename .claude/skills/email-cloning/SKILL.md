@@ -1,7 +1,6 @@
 ---
 name: email-cloning
 description: Clone an input HTML email for a new locale by swapping the locale code and stripping Eloqua tracking params from links. Use when the user provides an email HTML file and asks to clone/duplicate it for another locale (input_locale_1 -> input_locale_2).
-permissionMode: acceptEdits
 ---
 
 Input:

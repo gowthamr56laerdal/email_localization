@@ -25,4 +25,4 @@ Given a URL template containing a `{Site Domain}` placeholder, validate every lo
 
 - This skill is read-only against the repo (only reads `language-mapping.md`) and always writes its results to a CSV under `.temp/localized-webpage-check/` - it never dumps the full table into the terminal.
 - If the user's URL template has no `{Site Domain}` placeholder but otherwise implies "check across all locales," ask where in the URL the domain/locale segment goes before proceeding.
-- Do NOT use the excel MCP server for CSV output, even if asked to use "only excel MCP server." That server can only open pre-existing valid `.xlsx` zip binaries — it fails on both a brand-new file (`system cannot find the file`) and a plain-text `.csv` (`zip: not a valid zip file`). It cannot originate a CSV. Use the Write tool and, if the user specifically insisted on excel MCP only, explain this limitation before falling back to Write.
+- Follow the tooling rules from `.claude\agent-memory\webpage-validator\tooling-rules.md`
