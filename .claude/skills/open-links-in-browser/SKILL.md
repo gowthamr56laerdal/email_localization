@@ -19,6 +19,7 @@ requiring the Claude in Chrome extension.
      `*_URL_LOG.csv` validation output exists, grep that CSV for matching rows and
      extract the URLs.
    - If the user pastes/names URLs directly, use those as-is.
+   - If the user pastes URL with `{site_domain}` placeholder, replace that from `reference-library\language-mapping.md` and `reference-library\extra-locales.md`
 2. Build a PowerShell array of the URLs and open each with `Start-Process`:
 
    ```powershell

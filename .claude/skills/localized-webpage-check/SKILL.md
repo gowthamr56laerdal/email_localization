@@ -10,7 +10,7 @@ Given a URL template containing a `{Site Domain}` placeholder, validate every lo
 
 ## Steps
 
-1. Read `reference-library/language-mapping.md` to get the full list of `Language | Language Code | Site Domain` rows.
+1. Read `reference-library/language-mapping.md` and `reference-library/extra-locales.md` to get the full list of `Language | Language Code | Site Domain` rows.
 2. Build the full URL list by substituting each row's `Site Domain` into the `{Site Domain}` placeholder in the user's URL template. De-duplicate by domain if multiple language rows share the same Site Domain.
 3. Invoke the `webpage-validator` agent (via the Agent tool) with:
    - The full list of built URLs, each paired with its expected `Language Code`.

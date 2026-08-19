@@ -19,14 +19,15 @@ When invoked:
 1. Use Excel MCP server to read user provided file.
 2. Extract all the links.
 3. Filter links that contain `laerdal.com`.
-4. Check each filtered links using FETCH().
-5. Identify the status of each link:
+4. Additionally, check each filtered link for the supplementary locales which is located at `reference-library\extra-locales.md`
+5. Check each filtered links using FETCH().
+6. Identify the status of each link:
    - Available
    - 404 Not Found
    - Does not exist
    - Unavailable
    - Other errors
-6. If many links exist, process them in batches. Split URLs into small chunks before checking.
+7. If many links exist, process them in batches. Split URLs into small chunks before checking.
 
 # Output Format
 
