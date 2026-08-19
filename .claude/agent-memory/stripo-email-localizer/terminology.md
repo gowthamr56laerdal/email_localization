@@ -42,3 +42,5 @@ These are brand product names that must remain in English across all languages:
 # Market-Specific Brand Renderings
 - Chinese (zh): "Laerdal" is rendered as "挪度" (Nuò dù) in market-facing copy, per existing zh reference-library examples (e.g. "挪度QCPR", "挪度医疗", "挪度复苏模型"). Use "挪度" instead of a transliteration or the English "Laerdal" when localizing brand-mentioned sentences into zh.
 
+# Notes
+- If a product name contains any conjunctions, prepositions, or similar connecting words (e.g., "Little Anne and AED Trainer", "SimCapture for EMS"), translate those conjunctions, prepositions, or connecting words as well.
