@@ -8,5 +8,8 @@
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "excel"
-  ]
+  ],
+  "enabledPlugins": {
+    "airtable@airtable-skills": true
+  }
 }
