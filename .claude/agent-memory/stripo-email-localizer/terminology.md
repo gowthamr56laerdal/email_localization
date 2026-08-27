@@ -35,6 +35,10 @@ These are brand product names that must remain in English across all languages:
 - vrClinicals
 - Multi-Venous IV Training Arms
 - SimMan 3G PLUS
+- Resusci Anne QCPR / Resusci® Anne QCPR
+- CPR Bralette Accessory (keep "Bralette" untranslated; "Accessory" should be translated as a generic noun)
+- LINK Technology / Integrated LINK Technology (keep "LINK" untranslated; "Technology"/"Integrated" should be translated as generic words)
+- QCPR App Pro Features (keep "QCPR App" untranslated per existing "QCPR App" entry; "Pro Features" should be translated)
 
 # Program Names - Never Translate
 - Healthcare Quality Improvement (HQI) (program name) - confirmed kept in English even inside otherwise-translated sentences in existing Norwegian reference-library copy ("...fokus på Healthcare Quality Improvement (HQI)."). Treat headings like "Healthcare Quality Improvement Resources" as [Program Name] + translated generic noun (e.g. Danish "Healthcare Quality Improvement-ressourcer").
