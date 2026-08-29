@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__excel__*",
+      "WebFetch(domain:laerdal.com)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "excel"
+  ]
+}
