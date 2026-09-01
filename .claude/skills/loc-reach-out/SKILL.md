@@ -28,9 +28,9 @@ Please let me know if you have question/doubts. Thank you
 1. `{local marketer}` - leave literally as `{local marketer}` in the output. Do not fill it in.
 2. `{campaign name}` - the campaign's `Campaign Name` field.
 3. `{GPMM}` - the campaign's `Initiator` field.
-4. `{CSO}` - the campaign's `Participating Sales Orgs` field.
-5. `{date}` - the campaign's EB1 date (the `Date` on the campaign's EB1 record/field).
-6. `{link}` - the Airtable review link, built as per `.claude/skill-memory/airtable-url-params.md`.
+4. `{CSO}` - the name of one participating sales org. One message is generated per CSO (not one combined message with the whole `Participating Sales Orgs` list).
+5. `{date}` - that specific CSO's EB1 `Send Date`, read from its own record in the `Emails` table. Each sales org has its own negotiated EB1 date - do NOT use the campaign-level `Global Send Date - EB1` field on the `Campaigns` table, it does not reflect per-org dates.
+6. `{link}` - that specific CSO's `Campaign Canvases` record ID, built into the Airtable review link as per `.claude/skill-memory/airtable-url-params.md`. Do NOT use the `Campaigns` table's own record ID - the "Local Input Needed (Canvas)" interface page is sourced from the `Campaign Canvases` table, so a link built from the parent campaign record does not open a valid detail panel for that CSO.
 
 ## Steps
 
@@ -38,19 +38,22 @@ Please let me know if you have question/doubts. Thank you
    - `search_bases` for the "OneMarketing OS" base (base ID `appHeT6F6et4Sq3CR` per `.claude/skill-memory/airtable-url-params.md` - confirm it still resolves, don't assume it's unchanged).
    - `list_tables_for_base` to find the campaigns table and its fields.
    - `search_records` (or `list_records_for_table` with a filter) for the record whose `Campaign Name` matches the input campaign name given by the user.
-2. From that record, read the `Initiator` and `Participating Sales Orgs` fields directly.
-3. Resolve the EB1 date:
-   - If the campaign record has a direct EB1 date field, use it.
-   - Otherwise, follow the link from the campaign record to its EB1 record (e.g. a linked "EBs" table) and read that record's `Date` field.
-4. Get the campaign record's Airtable record ID (`recXXXXXXXXXXXXXX`).
+2. From that record, read the `Initiator` field directly, and the `Participating Sales Orgs` field as the list of CSOs to loop over (one message per CSO, not one field pasted verbatim).
+3. Resolve each CSO's own EB1 date:
+   - For each participating sales org, query the `Emails` table filtered by `Email Campaign` = the campaign record, `EB` = `EB1`, and `Sales Org` = that CSO's record, then read that matching record's `Send Date` field.
+   - If there is no matching record, or its `Send Date` is empty, skip that CSO's message and flag it to the user instead of guessing (see Notes).
+4. Resolve each CSO's own `Campaign Canvases` record (for `{link}`):
+   - For each participating sales org, find the `Campaign Canvases` record where `Campaign` = the campaign record and `Sales Orgs` = that CSO's record (match on the linked record, not by parsing the canvas record's name string).
+   - Take that record's own Airtable record ID (`recXXXXXXXXXXXXXX`) - this is the CSO's record ID for the link, never the parent `Campaigns` record's ID.
+   - If there is no matching `Campaign Canvases` record for a CSO, skip that CSO's message and flag it to the user instead of guessing (see Notes).
 5. Build `{link}` following the pattern documented in `.claude/skill-memory/airtable-url-params.md`:
    `https://airtable.com/{Base ID}/{Page ID}?{Query param name}={Record ID}`
-   Reuse the same Base ID, Page ID ("Local Input Needed (Canvas)" interface), and query param name shown in that file's example - only the record ID changes per campaign.
-6. Fill the message template with the values gathered above, leaving `{local marketer}` untouched.
-7. Save all the drafted message outputs to `.temp\loc-reach-out\{campaign name}.txt`.
-   - Group drafted messages based on the AP, AM, EMA, and Others
+   Reuse the same Base ID, Page ID ("Local Input Needed (Canvas)" interface), and query param name shown in that file's example - only the record ID changes, and it changes per CSO (not just per campaign).
+6. For each participating CSO, fill the message template with that CSO's own `{CSO}`, `{date}`, and `{link}` (and the shared `{campaign name}`, `{GPMM}`), leaving `{local marketer}` untouched.
+7. Save all the drafted messages to a single file at `.temp\loc-reach-out\{campaign name}.txt` - one message block per CSO, separated by a blank line/divider so it's clear which message belongs to which CSO.
 
 ## Notes
 
 - If the campaign name doesn't match any record, or a required field is empty, tell the user what's missing instead of guessing or leaving a raw placeholder in the output.
-- Never invent or reuse a record ID/link from a different campaign.
+- Never invent or reuse a record ID/link from a different campaign or a different CSO. Every CSO's link must resolve to that CSO's own `Campaign Canvases` record - never fall back to the parent `Campaigns` record ID.
+- Keep this sentence `You're provided with 3 weeks for the review` in a CSO's message only if the total no. of days between the current date and that CSO's own EB1 `Send Date` is greater than 17. This is evaluated per CSO (their dates differ), not once for the whole campaign. Otherwise, skip that sentence in that CSO's message.
