@@ -1,3 +1,5 @@
 /.playwright
 /.playwright-cli
 /.temp
+auth.json
+.claude/agent-memory/salesforce-report-exporter/variables.jsonl
