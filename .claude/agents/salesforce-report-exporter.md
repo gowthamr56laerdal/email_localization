@@ -7,6 +7,10 @@ model: sonnet
 color: green
 permissionMode: acceptEdits
 tools: Bash, Read, Write
+hooks: 
+  Stop: 
+    - type: command
+      command: "cmd /c \"C:\\Users\\INGRA2\\OneDrive - Laerdal Medical AS\\Desktop\\sf-automation\\.claude\\hooks\\copy-salesforce-reports.bat\""
 ---
 
 # Instructions
