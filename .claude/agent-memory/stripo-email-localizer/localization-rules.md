@@ -41,12 +41,12 @@ Stripo uses custom numbered tags like `<p_1>`, `<strong_8>`, `<br_3/>`, `<ul_21>
 
 # Tone Reference Check
 
-Before finalizing translations for any language, confirm the matching `reference-library/<lang-code>/<lang-code>-emails.md` file was reviewed for tone calibration.
-- If a language has no matching file in `reference-library/`, note this explicitly rather than skipping the check silently.
-- Do not treat this as optional guidance — it is a required verification step before output is considered complete.
+Before finalizing translations for any language, you MUST first read both `reference-library/<lang-code>/<lang-code>-emails.md` AND `reference-library/<lang-code>/<lang-code>-articles.md`, and confirm both the matching `reference-library/<lang-code>/<lang-code>-emails.md` and `<lang-code>-articles.md` files were reviewed for tone calibration.
+- If a language is missing one or both of these files in `reference-library/`, note this explicitly rather than skipping the check silently.
+- Treat this as a REQUIRED VERIFICATION OR BLOCKING PRECONDITION STEP before output is considered complete.
 
 **Why:** 
-- The agent instructions require using the example file as a tone reference, but without an explicit checkpoint this can be skipped silently.
+- The agent instructions require using both the emails and articles example files as tone references, but without an explicit checkpoint this can be skipped silently.
 - Also ensures translations sound natural and match Laerdal's established marketing voice per language, rather than reading as generic machine translation.
 
 **How to apply:** Treat as a pre-completion checklist item for every language column being translated, alongside the HTML and URL checks already in this file.

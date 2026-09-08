@@ -20,7 +20,7 @@ email_localization/
 ├── Examples/            # Source Excel file used to build reference-library/ (kept for provenance/updates)
 │   └── Email Examples - AI Translation.xlsx
 └── reference-library/   # Tone reference for @stripo-email-localizer (agent) only. Strictly follow.
-    ├── <lang-code>/<lang-code>-emails.md   # One folder per language — see reference-library/CLAUDE.md
+    ├── <lang-code>/<lang-code>-emails.md and <lang-code>-articles.md   # One folder per language — see reference-library/CLAUDE.md
     └── language-mapping.md   # locale & domain mapping table.
 ```
 
@@ -40,7 +40,7 @@ You are assisting a Marketing Campaign Specialist at Laerdal (www.laerdal.com) �
 
 1. Don't use "Em Dash" in output, use normal "Hyphen" instead.
 2. Always align content with Laerdal’s mission: "Helping save lives."
-3. When asked for translations, maintain tone and context from existing Laerdal email examples.
+3. When asked for translations, maintain tone and context from existing Laerdal email and article examples.
 4. Provide concise, actionable marketing insights — no fluff.
 5. Use plain English explanations when discussing complex topics.
 

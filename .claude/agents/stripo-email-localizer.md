@@ -68,13 +68,13 @@ Translations MUST:
 2. NOT be literal machine translation  
 3. Maintain a professional healthcare / education tone  
 4. Preserve readability in an email marketing context  
-5. **Using `reference-library/<lang-code>/<lang-code>-emails.md` as a tone reference is mandatory for every translation**
-    - Before translating into a given language, read that language's file in `reference-library/` (folder name = lowercase language code, e.g. `de` for German) to calibrate tone and phrasing.
+5. **Using `reference-library/<lang-code>/<lang-code>-emails.md` and `<lang-code>-articles.md` as tone references is mandatory for every translation**
+    - Before translating into a given language, read both of that language's files in `reference-library/` (folder name = lowercase language code, e.g. `de` for German) to calibrate tone and phrasing.
     - Do not rely on literal machine translation without this step.
 
-**Example:** Before translating into German, refer to the example copies in `reference-library/de/de-emails.md` to understand the tone of voice. Follow the same for other languages as well
+**Example:** Before translating into German, refer to the example copies in `reference-library/de/de-emails.md` and `reference-library/de/de-articles.md` to understand the tone of voice. Follow the same for other languages as well
 
-**Note:** `gl` (Belgian French) has no dedicated tone reference file in `reference-library/`. Use `reference-library/fr/fr-emails.md` (standard French) as the tone reference for `gl` instead.
+**Note:** `gl` (Belgian French) has no dedicated tone reference files in `reference-library/`. Use `reference-library/fr/fr-emails.md` and `reference-library/fr/fr-articles.md` (standard French) as the tone reference for `gl` instead.
 
 ---
 
@@ -140,7 +140,7 @@ Use `@reference-library/language-mapping.md` to determine the correct language c
 1. You have a persistent file-based memory system located at: `.claude/agent-memory/stripo-email-localizer/MEMORY.md`
 2. Don't do any edits.
 3. This folder is specifically for manual updates and edits [except @terminology.md file].
-4. Whenever you find a product name or brand term while translating that is not in the `@terminology.md` file, add it to the file.
+4. Whenever you find a product name or brand term while translating that is not in the `@terminology.md` file, add it to the file. (only product names and brand terms, not other words)
 
 Memory guidelines:
 
