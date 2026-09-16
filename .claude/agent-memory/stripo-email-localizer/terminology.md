@@ -40,6 +40,10 @@ These are brand product names that must remain in English across all languages:
 - LINK Technology / Integrated LINK Technology (keep "LINK" untranslated; "Technology"/"Integrated" should be translated as generic words)
 - QCPR App Pro Features (keep "QCPR App" untranslated per existing "QCPR App" entry; "Pro Features" should be translated)
 - SimJunior (also appears as SimJunior®)
+- Limbs & Things Ltd (partner/manufacturer company name, e.g. "Simon Francis - Limbs & Things Ltd, UK" - keep the company name and the connecting "&" untranslated;)
+- Enterprise+CCM (SimCapture subscription tier name, e.g. "This will be available with Enterprise+CCM subscriptions only." - keep untranslated; "subscription(s)" should be translated as a generic noun)
+- Mobile Camera / SimCapture Mobile Camera Capture app (standalone app name used without the "SimCapture" prefix, e.g. "8 Mobile Camera or Patient Monitor Capture apps" - keep "Mobile Camera" untranslated; "apps" should be translated as a generic noun)
+- Patient Monitor Capture (SimCapture companion app name, e.g. "8 Mobile Camera or Patient Monitor Capture apps" - keep untranslated; "apps" should be translated as a generic noun)
 
 # Program Names - Never Translate
 - Healthcare Quality Improvement (HQI) (program name) - confirmed kept in English even inside otherwise-translated sentences in existing Norwegian reference-library copy ("...fokus på Healthcare Quality Improvement (HQI)."). Treat headings like "Healthcare Quality Improvement Resources" as [Program Name] + translated generic noun (e.g. Danish "Healthcare Quality Improvement-ressourcer").
